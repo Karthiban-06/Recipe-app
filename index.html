@@ -1,34 +1,1273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Food Phillia</title>
 </head>
+
 <body>
-    <div class="top-nav">
-        <div class="logo">
-            <h1>Food Phillia</h1>
+
+    <!--.... NAV BARN.....-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link" href="#sectionmenu" id="navItem2" onclick="display('sectionHomePage')">Home Page</a>
+                    <a class="nav-link" href="#sectionmenu" id="navItem2" onclick="display('sectionMenu')">Explore Menu</a>
+                    <a class="nav-link" href="#sectionpay" id="navItem3" onclick="display('sectionfeedback')">Feedback</a>
+                    <a class="nav-link" href="#sectionfollow" id="navItem4">About Us</a>
+                </div>
+            </div>
         </div>
-        <div class="nav">
-         <ul>
+    </nav>
+
+
+    
+
+     
+    <!--.... HOME PAGE.....-->
+
+    <div id="sectionHomePage">
+        <div class="banner-section-bg-container ">
+            <div class="d-flex justify-content-center flex-column">
+                
+                <div style="text-align: center;" >
+                    <div class="d-flex flex-column justify-content-center" style="margin-top:220px ;">
+                      <h1 class="banner-heading mb-3">Get Delicious Food Anytime</h1>
+                      <p class="banner-caption mb-4">Eat Smart & Healthy</p>
+                        <div class="text-align:center;">
+                           <button class="custom-button" onclick="display('sectionMenu')">View Menu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+   
+    
+    <!--.....EXPOLARE MENU......-->
+
+    <br><br>
+    
+    <div id="sectionMenu">
+        <div class="explore-menu-section pt-5 pb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Explore Menu</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="menu-item-image w-100" onclick="display('sectionNonVeg')"/>
+                            <h1 class="menu-card-title" onclick="display('sectionNonVeg')">Non-Veg Starters</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="menu-item-image w-100" onclick="display('sectionVeg')"/>
+                            <h1 class="menu-card-title" onclick="display('sectionVeg')">Veg Starters</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.gRHAg6vpeymZy3Z_2JR2xwHaE8&pid=Api&P=0&h=180" class="menu-item-image w-100" onclick="display('sectionSoups')"/>
+                            <h1 class="menu-card-title" onclick="display('sectionSoup')">Soups</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Fish & Sea food</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Main Course</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Noodles</h1>
+                        </div>
+                    </div>
+                </div>
+             
+            <div>
+              <button class="btn btn-primary" onclick="display('sectionHomePage')">BACK</button>
+            </div>
             
-            
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="services">Services</a></li>
-            <li><a href="#blog">Blog</a></li>
-         </ul>
+    
         </div>
     </div>
 
-    <div class="banner">
-    <img src="https://media.istockphoto.com/id/1313187927/vector/cooking-food-and-vegetables-background.jpg?s=612x612&w=0&k=20&c=qC9BPv5TLtYEh-_myYacOZSugAEUx4S_uq5s6H33-ss="
+    <!--.... NON-VEG .......-->
+
+    <div id="sectionNonVeg">
+        <div class="explore-menu-section pt-5 pb-5" >
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading" style="padding: 8px;">Non - Veg</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://i.pinimg.com/474x/12/db/f0/12dbf0a086027956c41c4b9b5683c094.jpg" class="menu-item-image w-100" onclick="display('sectionChickenBiriyani')" />
+                            <h1 class="menu-card-title" onclick="display('sectionChickenBiriyani')">Chicken Briyani</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://i.pinimg.com/474x/d7/11/69/d71169e812e07a94090cfd10cbf1560e.jpg" class="menu-item-image w-100" onclick="display('sectionMottonBiriyani')" />
+                            <h1 class="menu-card-title" onclick="display('sectionMottonBiriyani')">Mutton Biriyani</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.to0wubBL6n_UGwaTxHwrRgHaGn&pid=Api&P=0&h=180" class="menu-item-image w-100" onclick="display('sectionChickenChukka')"/>
+                            <h1 class="menu-card-title" onclick="display('sectionChickenChukka')">Chicken chukka</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://i.pinimg.com/originals/cf/d4/5e/cfd45eeb5d9eed4d0cb2299a20805190.jpg" class="menu-item-image w-100" onclick="display('sectionMuttonChukka')"/>
+                            <h1 class="menu-card-title" onclick="display('sectionMuttonChukka')">Mutton Chukka</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.Pj566yVkGAntjevNG-Lj8AHaFl&pid=Api&P=0&h=180" class="menu-item-image w-100" onclick="display('sectionButterChicken')"/>
+                            <h1 class="menu-card-title" onclick="display('sectionButterChicken')">Butter Chicken</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.pl7-E-hgXO1apuptz_clewHaEK&pid=Api&P=0&h=180" class="menu-item-image w-100" onclick="display('sectionMuttonPaya')"/>
+                            <h1 class="menu-card-title" onclick="display('sectionMuttonPaya')">Mutton Paya</h1>
+                        </div>
+                    </div>
+                    
+                </div>
+             
+            <div>
+              <button class="btn btn-primary" onclick="display('sectionMenu')">BACK</button>
+            </div>
+            
+    
+        </div>
     </div>
-    <div class="order">
+
+    <!--.... NON VEG ITEMS .....-->
+
+    <!--.... CHICKEN BIRIYANI ....-->
+
+    <div id="sectionChickenBiriyani">
+        <h1 class="header">Chicken Biriyani</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://i.pinimg.com/474x/12/db/f0/12dbf0a086027956c41c4b9b5683c094.jpg" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                         <li>500g chicken</li>
+                         <li>cup yogurt</li>
+                         <li>1 tbsp ginger-garlic paste</li>
+                         <li> 1 tsp red chili powder</li>
+                         <li>1 tsp turmeric</li>
+                         <li> 1 tsp garam masala</li>
+                         <li>1 tbsp lemon juice</li>
+                         <li>Salt</li>
+                         <li>2 cups basmati rice</li>
+                         <li> 4 cups water</li>
+                         <li>Bay leaves, cloves, cinnamon, cardamom, cumin (just a pinch of each)</li>
+                         <li> Salt</li>
+                      </ul>
+                </div>
+                <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Mix chicken with yogurt, spices, lemon juice, and salt. Marinate for 30 mins to 1 hour.</li>
+                      <li>Boil rice in water with bay leaves, cloves, cinnamon, cardamom, cumin, and salt for 6-7 mins (don't fully cook it). Drain.</li>
+                      <li>Heat ghee/oil. Fry onions until golden, set some aside for garnish.
+                          Add ginger-garlic paste, then chopped tomatoes. Cook for a few minutes.
+                          Add marinated chicken, cook for 10-12 mins until done</li>
+                      <li>In a pot, layer rice and chicken gravy. Add saffron (optional) and drizzle ghee.
+                           Garnish with fried onions.</li>
+                      <li>Cover the pot and cook on low heat (dum) for 15-20 minutes.</li>
+                      <li>Fluff the biryani and serve with raita or salad.</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionNonVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... MOTTON BIRIYANI .....-->
+
+     <div id="sectionMottonBiriyani">
+        <h1 class="header">Mutton Biriyani</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://i.pinimg.com/474x/d7/11/69/d71169e812e07a94090cfd10cbf1560e.jpg" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>500g mutton</li>
+                        <li> 1 cup yogurt</li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>1 tbsp chili powder, 1/2 tbsp turmeric, 1 tbsp garam masala</li>
+                        <li>Salt & 1 tbsp lemon juice</li>
+                        <li>Chopped mint & coriander</li>
+                        <li>2 cups basmati rice</li>
+                        <li>Bay leaf, cloves, cardamoms, cinnamon, salt</li>
+                        <li>2 onions (sliced)</li>
+                        <li>2 tomatoes (chopped)</li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>1/4 cup ghee/oil</li>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Mix mutton with yogurt, ginger-garlic paste, spices, salt, lemon juice, and herbs. Marinate for 1-2 hours.</li>
+                      <li>Boil rice with spices for 5-7 mins (half-cooked). Drain.</li>
+                      <li>Fry onions in ghee/oil, then add ginger-garlic paste and tomatoes. Add marinated mutton, cook until tender.</li>
+                      <li>Layer mutton and rice in a pot. Sprinkle garam masala and herbs</li>
+                      <li>Cover and cook on low for 20-30 mins.</li>
+                      <li>Fluff and serve with raita.</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionNonVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... CHICKEN CHUKKA .....-->
+
+     <div id="sectionChickenChukka">
+        <h1 class="header">Chicken Chukka</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://tse3.mm.bing.net/th?id=OIP.to0wubBL6n_UGwaTxHwrRgHaGn&pid=Api&P=0&h=180" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>500g chicken (cut into pieces)</li>
+                        <li>1 onion (sliced)</li>
+                        <li>1 tomato (chopped)</li>
+                        <li>2-3 green chilies (slit)</li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>1 tsp red chili powder</li>
+                        <li>1 tsp turmeric powder</li>
+                        <li>1 tsp garam masala</li>
+                        <li>1 tsp fennel seeds</li>
+                        <li>1 tbsp oil</li>
+                        <li>Salt to taste</li>
+                        <li>Fresh coriander leaves (for garnish)</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Heat oil in a pan and add fennel seeds. Let them splutter.</li>
+                      <li>Add onions and sauté until golden brown.</li>
+                      <li>Add ginger-garlic paste and sauté for 1-2 minutes.</li>
+                      <li>Add tomatoes, green chilies, red chili powder, turmeric powder, and salt. Cook until tomatoes soften</li>
+                      <li>Add chicken pieces and cook for 5-7 minutes, stirring occasionally.</li>
+                      <li>Add a little water (just enough to cover the chicken), cover, and cook until chicken is tender (about 15-20 minutes).</li>
+                      <li>Once the chicken is cooked, increase the heat to dry out excess water and allow the chicken to absorb the spices.</li>
+                      <li>Sprinkle garam masala and cook for 2 more minutes.</li>
+                      <li>Garnish with coriander leaves and serve hot</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionNonVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... MOTTON CHUKKA .....-->
+
+     <div id="sectionMuttonChukka"chukka>
+        <h1 class="header">Mutton </h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://i.pinimg.com/originals/cf/d4/5e/cfd45eeb5d9eed4d0cb2299a20805190.jpg" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>500g mutton (cut into pieces)</li>
+                        <li>1 onion (sliced)</li>
+                        <li>1 tomato (chopped)</li>
+                        <li>2-3 green chilies (slit)</li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>1 tsp red chili powder</li>
+                        <li>1 tsp turmeric powder</li>
+                        <li>1 tsp garam masala</li>
+                        <li>1 tsp fennel seeds</li>
+                        <li>1 tbsp oil</li>
+                        <li>Salt to taste</li>
+                        <li>Fresh coriander leaves (for garnish)</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Heat oil in a pan and add fennel seeds. Let them splutter.</li>
+                      <li>Add onions and sauté until golden brown.</li>
+                      <li>Add ginger-garlic paste and sauté for 1-2 minutes.</li>
+                      <li>Add tomatoes, green chilies, red chili powder, turmeric powder, and salt. Cook until tomatoes soften</li>
+                      <li>Add chicken pieces and cook for 5-7 minutes, stirring occasionally.</li>
+                      <li>Add a little water (just enough to cover the chicken), cover, and cook until chicken is tender (about 15-20 minutes).</li>
+                      <li>Once the chicken is cooked, increase the heat to dry out excess water and allow the chicken to absorb the spices.</li>
+                      <li>Sprinkle garam masala and cook for 2 more minutes.</li>
+                      <li>Garnish with coriander leaves and serve hot</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionNonVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... BUTTTER CHICKEN  .....-->
+
+     <div id="sectionButterChicken">
+        <h1 class="header">Butter Chicken</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://tse1.mm.bing.net/th?id=OIP.Pj566yVkGAntjevNG-Lj8AHaFl&pid=Api&P=0&h=180" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>500g chicken (cut into pieces)</li>
+                        <li>1 onion (sliced)</li>
+                        <li>1 tomato (chopped)</li>
+                        <li>1/4 cup cream</li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>1 tsp red chili powder</li>
+                        <li>1 tsp turmeric powder</li>
+                        <li>1 tsp garam masala</li>
+                        <li>2 tbsp butter</li>
+                        <li>Salt to taste</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Marinate chicken with ginger-garlic paste, chili powder, and salt for 30 mins.</li>
+                      <li>Cook chicken in a pan until done (8-10 mins). Set aside.</li>
+                      <li>In the same pan, melt butter, sauté onion until golden.</li>
+                      <li>Add pureed tomato, chili powder, garam masala, and salt. Cook for 5 mins.</li>
+                      <li>Add cooked chicken, then stir in cream. Simmer for 5 mins.</li>
+                      <li>Serve with naan or rice</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionNonVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... MUTTON PAYA  .....-->
+
+     <div id="sectionMuttonPaya">
+        <h1 class="header">Mutton Paya</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://tse1.mm.bing.net/th?id=OIP.pl7-E-hgXO1apuptz_clewHaEK&pid=Api&P=0&h=180" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>4 mutton trotters</li>
+                        <li>1 onion (chopped)</li>
+                        <li>3 tomato (chopped)</li>
+                        <li>Fresh coriander</li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>1 tsp red chili powder</li>
+                        <li>1 tsp turmeric powder</li>
+                        <li>1 tsp garam masala</li>
+                        <li>2 tbsp oil</li>
+                        <li>Salt to taste</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Clean trotters and wash them well.</li>
+                      <li>Heat oil in a pot, sauté chopped onion until golden.</li>
+                      <li>Add ginger-garlic paste, cook for 1-2 mins.</li>
+                      <li>Add tomatoes, red chili powder, turmeric, and salt. Cook until soft.</li>
+                      <li>Add mutton trotters and water (enough to cover them). Bring to a boil.</li>
+                      <li>Simmer on low heat for 2-3 hours until the trotters are soft and the broth thickens.</li>
+                      <li>Add garam masala, cook for 5 more mins.</li>
+                      <li>Garnish with coriander and serve hot</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionNonVeg')">Back</button>
+        </div>
+     </div>
+
+        <!--.... VEG .......-->
+
+        <div id="sectionVeg">
+            <div class="explore-menu-section pt-5 pb-5" >
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="menu-section-heading" style="padding: 8px;">Veg</h1>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="shadow menu-item-card p-3 mb-3">
+                                <img src="https://tse2.mm.bing.net/th?id=OIP.Xk8ct2Ye-acFhqtnj_QU_wHaFA&pid=Api&P=0&h=180" class="menu-item-image w-100" onclick="display('sectionpannerbuttermasala')" />
+                                <h1 class="menu-card-title" onclick="display('sectionpannerbuttermasala')">Paneer Butter Masala</h1>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="shadow menu-item-card p-3 mb-3">
+                                <img src="https://i.pinimg.com/originals/a6/5c/f4/a65cf448bd4c69060a408a0f6e221edf.jpg" class="menu-item-image w-100" onclick="display('sectionVegetablePulao')" />
+                                <h1 class="menu-card-title" onclick="display('sectionVegetablePulao')">Vegetable Pulao</h1>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="menu-item-card shadow p-3 mb-3">
+                                
+                                <img src="https://i.pinimg.com/736x/22/14/90/22149026d34ac431fa6b4895526a17af.jpg" class="menu-item-image w-100" onclick="display('sectionAloogobi')"/>
+                                <h1 class="menu-card-title" onclick="display('sectionAloogobi')">Aloo Gobi</h1>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="menu-item-card shadow p-3 mb-3">
+                                <img src="https://www.seriouseats.com/thmb/2KtHVPso7I68piUvR0501CjHJyY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__03__20160328-channa-masala-recipe-8-2ab6195d55ae4068a8c1d36d7371f5f7.jpg" class="menu-item-image w-100" onclick="display('sectionChannamasala')"/>
+                                <h1 class="menu-card-title" onclick="display('sectionChannamasala')">Channa Masala</h1>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="menu-item-card shadow p-3 mb-3">
+                                <img src="https://cdn.loveandlemons.com/wp-content/uploads/2023/01/mushroom-risotto.jpg" class="menu-item-image w-100" onclick="display('sectionmushroomrishtoo')"/>
+                                <h1 class="menu-card-title" onclick="display('sectionmushroomrishtoo')">Mushroom Risotto</h1>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                 
+                <div>
+                  <button class="btn btn-primary" onclick="display('sectionMenu')">BACK</button>
+                </div>
+                
         
-        <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+    <!--.... VEG LIST  .....-->
+
+    <!--.... PANNER BUTTER MASALA ....-->
+
+    <div id="sectionpannerbuttermasala">
+        <h1 class="header">Panner Butter Masala</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://tse2.mm.bing.net/th?id=OIP.Xk8ct2Ye-acFhqtnj_QU_wHaFA&pid=Api&P=0&h=180" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>250g paneer (cubed)</li>
+                        <li>1 onion (chopped)</li>
+                        <li>1 tomato (pureed)</li>
+                        <li>1/4 cup cream</li>
+                        <li>2 tbsp butter</li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>1 tsp chili powder</li>
+                        <li>1 tsp garam masala</li>
+                        <li>Salt to taste</li>
+                        <li>Fresh coriander (for garnish)</li>
+                         
+                     </ul>
+                </div>
+                <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Heat butter in a pan, sauté chopped onion until golden.</li>
+                      <li>Add ginger-garlic paste, cook for 1-2 mins.</li>
+                      <li>Add tomato puree, chili powder, and salt. Cook for 5 mins.</li>
+                      <li>Add paneer cubes and mix gently.</li>
+                      <li>Stir in cream and cook for 5 mins.</li>
+                      <li>Sprinkle garam masala and cook for 2 more minutes.</li>
+                      <li>Garnish with fresh coriander.</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... VEGETABLE PULAO .....-->
+
+     <div id="sectionVegetablePulao">
+        <h1 class="header">Vegetable Pulao</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://i.pinimg.com/originals/a6/5c/f4/a65cf448bd4c69060a408a0f6e221edf.jpg" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>1 cup basmati rice</li>
+                        <li>200g paneer (cubed)</li>
+                        <li>1 onion (chopped)</li>
+                        <li>1 tomato (chopped)</li>
+                        <li>1/2 cup mixed vegetables (carrot, peas, beans)</li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>1 tsp cumin seeds</li>
+                        <li>1 tsp garam masala</li>
+                        <li>2 tbsp oil</li>
+                        <li>Salt to taste</li>
+                        <li>Fresh coriander (for garnish)</li>
+                     </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Rinse rice and set aside</li>
+                      <li>Heat oil in a pan, add cumin seeds, and sauté chopped onion until golden.</li>
+                      <li>Add ginger-garlic paste, cook for 1-2 mins.</li>
+                      <li>Add tomato and mixed vegetables, cook for 3-4 mins.</li>
+                      <li>Add rice and mix well. Add 2 cups water and salt.</li>
+                      <li>Cook on low heat for 10-15 mins until rice is done.</li>
+                      <li>Add paneer cubes and garam masala, mix gently.</li>
+                      <li>Garnish with fresh coriander.</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... ALOOGOBI .....-->
+
+     <div id="sectionAloogobi">
+        <h1 class="header">Aloo Gobi</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://i.pinimg.com/736x/22/14/90/22149026d34ac431fa6b4895526a17af.jpg" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>2 potatoes (peeled & chopped)</li>
+                        <li>1 small cauliflower (cut into florets)</li>
+                        <li>1 onion (chopped)</li>
+                        <li>1 tomato (chopped)</li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>1 tsp cumin seeds</li>
+                        <li>1 tsp turmeric powder</li>
+                        <li>1 tsp garam masala</li>
+                        <li>1 tsp red chili powder</li>
+                        <li>1 tbsp oil</li>
+                        <li>Salt to taste</li>
+                        <li>Fresh coriander leaves (for garnish)</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Heat oil in a pan, add cumin seeds and sauté onions until golden.</li>
+                      <li>Add ginger-garlic paste and cook for 1-2 mins.</li>
+                      <li>Add tomato, turmeric, red chili powder, and salt. Cook for 3-4 mins.</li>
+                      <li>Add potatoes and cauliflower. Mix well.</li>
+                      <li>Add 1 cup water, cover, and cook for 15-20 mins until veggies are soft.</li>
+                      <li>Add garam masala and mix.</li>
+                      <li>Garnish with fresh coriander.</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... CHANNA MASALA .....-->
+
+     <div id="sectionChannamasala">
+        <h1 class="header">Channa Masala</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://www.seriouseats.com/thmb/2KtHVPso7I68piUvR0501CjHJyY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2016__03__20160328-channa-masala-recipe-8-2ab6195d55ae4068a8c1d36d7371f5f7.jpg" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>1 can chickpeas (or 1 cup dried chickpeas, soaked and boiled)</li>
+                        <li>1 onion (chopped)</li>
+                        <li>1 tomato (chopped)</li>
+                        <li>1 tsp cumin seeds</li>
+                        <li>1 tbsp ginger-garlic paste</li>
+                        <li>1 tsp red chili powder</li>
+                        <li>1 tsp turmeric powder</li>
+                        <li>1 tsp garam masala</li>
+                        <li>1 tsp fennel seeds</li>
+                        <li>2 tbsp oil</li>
+                        <li>Salt to taste</li>
+                        <li>Fresh coriander leaves (for garnish)</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Heat oil in a pan, add cumin seeds and sauté onions until golden.</li>
+                      <li>Add ginger-garlic paste, cook for 1-2 mins.</li>
+                      <li>Add tomato, turmeric, red chili powder, and salt. Cook for 3-4 mins.</li>
+                      <li>Add boiled chickpeas and mix well.</li>
+                      <li>Add 1 cup water, cover, and cook for 10-15 mins on low heat.</li>
+                      <li>Add garam masala and mix.</li>
+                      <li>Garnish with fresh coriander</li>
+                      
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... MUSHROOM RISOTTO  .....-->
+
+     <div id="sectionmushroomrishtoo">
+        <h1 class="header">Mushroom Risotto</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://cdn.loveandlemons.com/wp-content/uploads/2023/01/mushroom-risotto.jpg" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>1 cup Arborio rice</li>
+                        <li>200g mushrooms (button or cremini), sliced</li>
+                        <li>1 small onion, chopped</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>4 cups vegetable broth, kept warm</li>
+                        <li>1/2 cup dry white wine (optional)</li>
+                        <li>1/4 cup Parmesan cheese, grated (optional)</li>
+                        <li>2 tbsp butter</li>
+                        <li>2 tbsp olive oil</li>
+                        <li> Salt and pepper to taste</li>
+                        <li>Fresh parsley for garnish</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Heat olive oil and butter in a large pan over medium heat. Add the chopped onion and cook until softened.</li>
+                      <li>Add the garlic and sliced mushrooms, and cook for 5-7 minutes until the mushrooms release their moisture and become tender.</li>
+                      <li>Add the Arborio rice and cook for 1-2 minutes, stirring constantly to toast the rice lightly.</li>
+                      <li>Pour in the white wine (if using) and cook until absorbed.</li>
+                      <li>Begin adding the warm vegetable broth, one ladle at a time, stirring frequently. Wait for the liquid to be absorbed before adding more broth. Continue until the rice is creamy and cooked through (about 20-25 minutes).</li>
+                      <li>Stir in the Parmesan cheese, if using, and season with salt and pepper.</li>
+                      <li>Garnish with fresh parsley and serve hot.</li>
+
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionVeg')">Back</button>
+        </div>
+     </div>
+
+
+     
+
+     
+
+    <!--.... SOUPS .......-->
+
+    <div id="sectionSoup">
+        <div class="explore-menu-section pt-5 pb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading" style="padding: 8px;">Soups</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Briyani</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Matton Biriyani</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Butter Masala</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Chukka</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Motton Chukka</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chiken Wings</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">motton wings</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">uhmfoi</h1>
+                        </div>
+                    </div>
+                </div>
+             
+            <div>
+                
+              <button class="btn btn-primary" onclick="display('sectionMenu')">BACK</button>
+            </div>
+            
+    
+        </div>
     </div>
+    
+      <!--.... TOMATO SOUP ....-->
+
+    <div id="sectiontomatosoup">
+        <h1 class="header">Tomato Soup</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="https://tse2.mm.bing.net/th?id=OIP.Xk8ct2Ye-acFhqtnj_QU_wHaFA&pid=Api&P=0&h=180" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>4 ripe tomatoes (chopped)</li>
+                        <li>1 onion (chopped)</li>
+                        <li>2 garlic cloves (minced)</li>
+                        <li>2 tbsp butter or olive oil</li>
+                        <li>2 cups vegetable or chicken broth</li>
+                        <li>1 tsp salt</li>
+                        <li>1/2 tsp pepper</li>
+                        <li>1/2 tsp sugar (optional)</li>
+                        <li> 1/4 cup cream or milk (optional)</li>
+                        <li>Fresh basil or parsley (for garnish)</li>
+                         
+                     </ul>
+                </div>
+                <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Cook onions & garlic: In a pot, heat butter/oil over medium heat. Add chopped onions and minced garlic. Cook until soft (3-4 mins).</li>
+                      <li>Add tomatoes: Add chopped tomatoes and cook for 5 minutes until they soften.</li>
+                      <li>Add broth & seasonings: Pour in broth, salt, pepper, and sugar. Stir well and bring to a boil. Lower heat and simmer for 15-20 minutes.</li>
+                      <li>Blend soup: Use an immersion blender (or regular blender) to blend until smooth.</li>
+                      <li>Add cream: Stir in cream or milk for a creamy texture (optional).</li>
+                      <li>Serve: Garnish with fresh herbs and enjoy!</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... SWEET CORN SOUP .....-->
+
+     <div id="sectionsweetcorn">
+        <h1 class="header">Sweet Corn Soup</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="img/chicken1.jpeg" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>1 cup sweet corn kernels (fresh or frozen)</li>
+                        <li>1 small onion (chopped)</li>
+                        <li>1 small potato (peeled and chopped)</li>
+                        <li>2 cups vegetable or chicken broth</li>
+                        <li>1 tbsp butter or oil</li>
+                        <li>1/2 tsp salt</li>
+                        <li>1/4 tsp pepper</li>
+                        <li>1/2 tsp sugar (optional)</li>
+                        <li>1 tbsp corn flour (cornstarch) mixed with 2 tbsp water (for thickening)</li>
+                        <li>1 tbsp cream (optional)</li>
+                        <li>Chopped spring onions or parsley (for garnish)</li>
+                     </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Cook onion & potato: Heat butter/oil in a pot. Add chopped onion and cook until soft (2-3 mins). Add chopped potato and cook for another 2 mins.</li>
+                      <li>Add corn & broth: Add sweet corn and broth to the pot. Bring to a boil, then simmer for 10-12 minutes until the potato is soft.</li>
+                      <li>Blend soup: Use a blender to puree the soup until smooth (optional, or keep it chunky).
+
+                      </li>
+                      <li>Add the corn flour slurry (cornstarch mixed with water) to the soup and stir. Cook for 2-3 minutes until it thickens.</li>
+                      <li>Add salt, pepper, and sugar (optional). Stir in cream for a richer taste.</li>
+                      <li>Garnish with chopped spring onions or parsley. Enjoy!</li>
+                      
+
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... MINESTRONE SOUP.....-->
+
+     <div id="sectionminestrone">
+        <h1 class="header">Minestrone Soup</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="img/chicken1.jpeg" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>1 tbsp olive oil</li>
+                        <li>1 onion (chopped)</li>
+                        <li>1 carrot (chopped)</li>
+                        <li>1 celery stalk (chopped)</li>
+                        <li>2 garlic cloves (minced)</li>
+                        <li>1 can diced tomatoes (14 oz)</li>
+                        <li>1 cup green beans (chopped)</li>
+                        <li>1 small potato (chopped)</li>
+                        <li>1 can white beans (15 oz)</li>
+                        <li>4 cups vegetable broth</li>
+                        <li>1 tsp oregano</li>
+                        <li>1 tsp basil</li>
+                        <li>1/2 tsp salt</li>
+                        <li>1/4 tsp pepper</li>
+                        <li>1 cup small pasta</li>
+                        <li>Spinach (optional)</li>
+                        <li>Parmesan (optional)</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Heat olive oil, cook onion, carrot, and celery for 5 mins.</li>
+                      <li>Add garlic, tomatoes, green beans, potato, oregano, basil, salt, and pepper.</li>
+                      <li>Pour in broth, add beans, and simmer for 10-15 mins.
+                    </li>
+                      <li>Add pasta, cook 8-10 mins.</li>
+                      <li>Stir in spinach (optional).</li>
+                      <li>Serve with Parmesan (optional).</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionNonVeg')">Back</button>
+        </div>
+     </div>
+
+     <!--.... HOT AND SOUR SOUP .....-->
+
+     <div id="sectionhotsour">
+        <h1 class="header">Hot and Sour Soup</h1>
+        <div class="d-flex flex-row">
+            <section class="recipe-container">
+                <div class="recipe-image">
+                     <img src="img/chicken1.jpeg" alt="Delicious Pasta">
+                </div>
+ 
+                <div class="recipe-details">
+                     <h2>Ingredients</h2>
+                     <ul>
+                        <li>1/2 cup bamboo shoots (sliced)</li>
+                        <li>1/4 cup soy sauce</li>
+                        <li>2 tbsp rice vinegar</li>
+                        <li>1 tbsp chili paste or hot sauce</li>
+                        <li>1 tsp ginger (grated)</li>
+                        <li>1 tsp garlic (minced)</li>
+                        <li>1 tbsp corn flour (cornstarch) mixed with 2 tbsp water</li>
+                        <li>1 egg (beaten)</li>
+                        <li>1/4 tsp white pepper</li>
+                        <li>1/4 tsp black pepper</li>
+                        <li>Spring onions (for garnish)</li>
+                    </ul>
+                    </div>
+                    <div>
+                    <ol>
+                      <h2>Step-by-Step Instructions</h2>
+                      <li>Bring broth to a boil in a pot.</li>
+                      <li>Add mushrooms, tofu, and bamboo shoots. Cook for 5-7 minutes.</li>
+                      <li>Stir in soy sauce, rice vinegar, chili paste, ginger, and garlic.</li>
+                      <li>Mix corn flour with water, then add to the soup to thicken</li>
+                      <li>Slowly pour in beaten egg, stirring gently to form ribbons.</li>
+                      <li>Season with white and black pepper.</li>
+                      <li>Garnish with spring onions.</li>
+                    </ol>
+                </div>
+            </section>
+        </div>
+ 
+        <div>
+         <button class="btn btn-primary" onclick="display('sectionSoup')">Back</button>
+        </div>
+     </div>
+
+    <!--.... FISH AND SEA FOOD .......-->
+
+    <div id="sectionFish">
+        <div class="explore-menu-section pt-5 pb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading" style="padding: 8px;">FISH AND SEA FOOD</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://i.pinimg.com/474x/12/db/f0/12dbf0a086027956c41c4b9b5683c094.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Briyani</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://i.pinimg.com/474x/d7/11/69/d71169e812e07a94090cfd10cbf1560e.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Matton Biriyani</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Butter Masala</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Chukka</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Motton Chukka</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chiken Wings</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">motton wings</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">uhmfoi</h1>
+                        </div>
+                    </div>
+                </div>
+             
+            <div>
+              <button class="btn btn-primary" onclick="display('sectionMenu')">BACK</button>
+            </div>
+            
+    
+        </div>
+    </div>
+
+    <!--.... MAIN COURSE .......-->
+
+    <div id="sectionMainCourse">
+        <div class="explore-menu-section pt-5 pb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading" style="padding: 8px;">MAIN COURSE</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Briyani</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Matton Biriyani</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Butter Masala</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Chukka</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Motton Chukka</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chiken Wings</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">motton wings</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">uhmfoi</h1>
+                        </div>
+                    </div>
+                </div>
+             
+            <div>
+              <button class="btn btn-primary" onclick="display('sectionMenu')">BACK</button>
+            </div>
+            
+    
+        </div>
+    </div>
+
+    <!--.... NOODLES .......-->
+
+    <div id="sectionNoodels">
+        <div class="explore-menu-section pt-5 pb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading" style="padding: 8px;">NOODELS</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Briyani</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Matton Biriyani</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Butter Masala</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Chukka</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Motton Chukka</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chiken Wings</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">motton wings</h1>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">uhmfoi</h1>
+                        </div>
+                    </div>
+                </div>
+             
+            <div>
+              <button class="btn btn-primary" onclick="display('sectionMenu')">BACK</button>
+            </div>
+            
+    
+        </div>
+    </div>
+
+    <!--..... FEEDBACK .....-->
+
+    <div id="sectionfeedback">
+        <div class="thanking-customers-section pt-5 pb-5" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+                        <h1 class="thanking-customers-section-heading">
+                            Thank you for being a valuable customer to us.
+                        </h1>
+                        <p class="thanking-customers-section-description">
+                            We have a surprise gift for you
+                        </p>
+                        <div class="d-md-none">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                        </div>
+                        <div>
+                            <button class="custom-button">Redeem Gift</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 d-none d-md-block">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+        
+        <div class="follow-us-section pt-5 pb-5" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="follow-us-section-heading">Follow Us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        
+                        <h1 class="footer-section-mail-id">explorefood@foodphillia.com</h1>
+                        <p class="footer-section-address">
+                            FF07, 1st Floor, Main block, SECE Campus, Kondampatti, Kinathukadavi, Coimbatore.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    
+
+
+
+
+
+
+    <!--....LAST PAGE.....-->
+
+    
+
+    <script type="text/javascript" src="https://new-assets.ccbp.in/frontend/content/static-ccbp-ui-kit/static-ccbp-ui-kit.js"></script>
+    <script type="text/javascript" src="https://new-assets.ccbp.in/frontend/content/static-ccbp-ui-kit/static-ccbp-ui-kit.js"></script>
+   
+
 </body>
+
 </html>
